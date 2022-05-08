@@ -2,10 +2,10 @@ import {
     country_list
 } from "./country-list.js";
 
-const dropList = document.querySelectorAll("form select"),
-    fromCurrency = document.querySelector(".from select"),
-    toCurrency = document.querySelector(".to select"),
-    getButton = document.querySelector("form button");
+const dropList = document.querySelectorAll("form select");
+const fromCurrency = document.querySelector(".from select");
+const toCurrency = document.querySelector(".to select");
+const getButton = document.querySelector("form button");
 
 for (let i = 0; i < dropList.length; i++) {
     for (let currency_code in country_list) {
@@ -58,9 +58,10 @@ function getExchangeRate() {
     let url = `https://v6.exchangerate-api.com/v6/21eb0894668c6f43ab94bb5e/latest/${fromCurrency.value}`;
     fetch(url).then(response => response.json()).then(result => {
         let exchangeRate = result.conversion_rates[toCurrency.value];
-        let totalExRate = (amountVal * exchangeRate).toFixed(2);
+        let totalExRate = (amountVal * exchangeRate).toFixed(3);
         exchangeRateTxt.innerText = `${amountVal} ${fromCurrency.value} = ${totalExRate} ${toCurrency.value}`;
-    }).catch(() => {
-        exchangeRateTxt.innerText = "Something went wrong";
+    }).catch((err) => {
+        console.log(err.toString());
+        exchangeRateTxt.innerText = "Please check internet connectivity";
     });
 }
