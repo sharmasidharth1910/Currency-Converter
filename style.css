@@ -13,6 +13,7 @@ body {
   min-height: 100vh;
   padding: 0 10px;
   background: #b9f8d3;
+  color: #143f6b;
 }
 
 ::selection {
