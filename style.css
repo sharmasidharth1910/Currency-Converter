@@ -1,4 +1,3 @@
-/* Import Google Font - Poppins */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 * {
   margin: 0;
@@ -13,12 +12,12 @@ body {
   justify-content: center;
   min-height: 100vh;
   padding: 0 10px;
-  background: #675afe;
+  background: #b9f8d3;
 }
 
 ::selection {
-  color: #fff;
-  background: #675afe;
+  color: #143f6b;
+  background: #b9f8d3;
 }
 
 .wrapper {
@@ -26,7 +25,8 @@ body {
   padding: 30px;
   border-radius: 7px;
   background: #fff;
-  box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid #143f6b;
+  box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.2);
 }
 
 .wrapper header {
@@ -46,6 +46,10 @@ form :where(input, select, button) {
   border: none;
 }
 
+.amount {
+  margin-top: 25px;
+}
+
 form p {
   font-size: 18px;
   margin-bottom: 5px;
@@ -60,7 +64,7 @@ form input {
 
 form input:focus {
   padding: 0 14px;
-  border: 2px solid #675afe;
+  border: 2px solid #143f6b;
 }
 
 form .drop-list {
@@ -96,13 +100,13 @@ form .drop-list {
 }
 
 .select-box select::-webkit-scrollbar-track {
-  background: #fff;
+  background: #143f6b;
 }
 
 .select-box select::-webkit-scrollbar-thumb {
   background: #888;
   border-radius: 8px;
-  border-right: 2px solid #ffffff;
+  border-right: 2px solid #143f6b;
 }
 
 .drop-list .icon {
@@ -112,19 +116,22 @@ form .drop-list {
 }
 
 form .exchange-rate {
-  font-size: 17px;
-  margin: 20px 0 30px;
+  font-size: 18px;
+  margin: 20px 0 20px;
 }
 
 form button {
   height: 52px;
-  color: #fff;
   font-size: 17px;
   cursor: pointer;
-  background: #675afe;
   transition: 0.3s ease;
+  border: 1px solid #b9f8d3;
+  background: #143f6b;
+  color: #b9f8d3;
 }
 
 form button:hover {
-  background: #4534fe;
+  background: #14406b92;
+  color: #b9f8d3;
+  box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.2);
 }
